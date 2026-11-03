@@ -47,7 +47,7 @@ Le script est **rejouable** : le relancer ne crée pas de doublons. Il est **por
 migration-donnees-medicales-mongodb/
 ├── data/                         # le CSV (non versionné) et l'export JSON
 │   └── .gitkeep
-├── docs/                         # schémas (PNG) et leurs sources
+├── docs/                         # schémas (PNG), leurs sources, recherches AWS
 ├── mongo-init/
 │   └── 01-create-users.js        # rôles et utilisateurs, exécuté au 1er démarrage de MongoDB
 ├── notebooks/
@@ -372,6 +372,12 @@ Sans variables d'environnement, `src/config.py` utilise `localhost:27017` sans a
 | `migration exited with code 1` | `docker compose logs migration`, lire la ligne `Échec de la migration` |
 | `FileNotFoundError ... healthcare_dataset.csv` | le CSV n'est pas dans `data/` |
 | une modification du code n'est pas prise en compte | relancer avec `--build` |
+
+---
+
+## Pour aller plus loin : déploiement sur AWS
+
+Les options d'hébergement de MongoDB sur AWS (Amazon DocumentDB, MongoDB Atlas, EC2, ECS), avec leurs coûts et une recommandation, sont étudiées dans [`docs/recherches_aws.md`](docs/recherches_aws.md).
 
 ---
 
