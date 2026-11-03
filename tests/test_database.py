@@ -21,6 +21,8 @@ def _uri(user, password):
 @pytest.fixture(scope="module")
 def collection():
     user = os.getenv("MONGO_ANALYST_USER", "")
+    if not user:
+        pytest.skip("MONGO_ANALYST_USER non défini : ces tests tournent dans Docker")
     client = MongoClient(_uri(user, os.getenv("MONGO_ANALYST_PASSWORD", "")),
                          serverSelectionTimeoutMS=3000)
     try:
