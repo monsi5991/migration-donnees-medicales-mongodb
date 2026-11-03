@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+<defs>
+  <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#1d2733"/></marker>
+  <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#5b6776"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="40" y="48" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#1d2733">Schéma de la base MongoDB</text>
+<text x="40" y="76" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#5b6776">Base healthcare · collection admissions · structure d'un document et origine de chaque champ</text>
+<rect x="40" y="105" width="880" height="760" rx="12" fill="#f4f6f8" stroke="#c9d1db" stroke-width="2"/>
+<text x="60" y="138" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#1d2733" text-anchor="start" font-style="normal">Collection healthcare.admissions : 1 document = 1 séjour</text>
+<text x="878" y="138" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="end" font-style="italic">colonne du CSV</text>
+<text x="70" y="180" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="600" fill="#1d2733" text-anchor="start" font-style="normal">_id</text>
+<rect x="590" y="164" width="90" height="22" rx="11" fill="#ffffff" stroke="#5b6776" stroke-width="1"/><text x="635.0" y="180" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#5b6776" text-anchor="middle" font-style="normal">ObjectId</text>
+<text x="878" y="180" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="end" font-style="italic">(créé par MongoDB)</text>
+<rect x="60" y="200" width="840" height="164" rx="10" fill="#ffffff" stroke="#2f6aa3" stroke-width="2"/>
+<text x="78" y="228" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="700" fill="#2f6aa3" text-anchor="start" font-style="normal">patient</text>
+<text x="156" y="228" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="start" font-style="italic">sous-document</text>
+<text x="100" y="258" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="600" fill="#1d2733" text-anchor="start" font-style="normal">name</text>
+<rect x="590" y="242" width="72" height="22" rx="11" fill="#e8f0f9" stroke="#2f6aa3" stroke-width="1"/><text x="626.0" y="258" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#2f6aa3" text-anchor="middle" font-style="normal">string</text>
+<text x="878" y="258" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="end" font-style="italic">Name (normalisé)</text>
+<text x="100" y="288" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="600" fill="#1d2733" text-anchor="start" font-style="normal">age</text>
+<rect x="590" y="272" width="45" height="22" rx="11" fill="#e6f4ee" stroke="#00684A" stroke-width="1"/><text x="612.5" y="288" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#00684A" text-anchor="middle" font-style="normal">int</text>
+<text x="878" y="288" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="end" font-style="italic">Age</text>
+<text x="100" y="318" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="600" fill="#1d2733" text-anchor="start" font-style="normal">gender</text>
+<rect x="590" y="302" width="72" height="22" rx="11" fill="#e8f0f9" stroke="#2f6aa3" stroke-width="1"/><text x="626.0" y="318" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#2f6aa3" text-anchor="middle" font-style="normal">string</text>
+<text x="878" y="318" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="end" font-style="italic">Gender</text>
+<text x="100" y="348" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="600" fill="#1d2733" text-anchor="start" font-style="normal">blood_type</text>
+<rect x="590" y="332" width="72" height="22" rx="11" fill="#e8f0f9" stroke="#2f6aa3" stroke-width="1"/><text x="626.0" y="348" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#2f6aa3" text-anchor="middle" font-style="normal">string</text>
+<text x="878" y="348" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="end" font-style="italic">Blood Type</text>
+<text x="70" y="396" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="600" fill="#1d2733" text-anchor="start" font-style="normal">medical_condition</text>
+<rect x="590" y="380" width="72" height="22" rx="11" fill="#e8f0f9" stroke="#2f6aa3" stroke-width="1"/><text x="626.0" y="396" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#2f6aa3" text-anchor="middle" font-style="normal">string</text>
+<text x="878" y="396" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="end" font-style="italic">Medical Condition</text>
+<rect x="60" y="416" width="840" height="224" rx="10" fill="#ffffff" stroke="#a86a00" stroke-width="2"/>
+<text x="78" y="444" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="700" fill="#a86a00" text-anchor="start" font-style="normal">admission</text>
+<text x="176" y="444" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="start" font-style="italic">sous-document</text>
+<text x="100" y="474" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="600" fill="#1d2733" text-anchor="start" font-style="normal">date</text>
+<rect x="590" y="458" width="54" height="22" rx="11" fill="#fdf3e1" stroke="#a86a00" stroke-width="1"/><text x="617.0" y="474" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#a86a00" text-anchor="middle" font-style="normal">date</text>
+<text x="878" y="474" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="end" font-style="italic">Date of Admission</text>
+<text x="100" y="504" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="600" fill="#1d2733" text-anchor="start" font-style="normal">type</text>
+<rect x="590" y="488" width="72" height="22" rx="11" fill="#e8f0f9" stroke="#2f6aa3" stroke-width="1"/><text x="626.0" y="504" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#2f6aa3" text-anchor="middle" font-style="normal">string</text>
+<text x="878" y="504" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="end" font-style="italic">Admission Type</text>
+<text x="100" y="534" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="600" fill="#1d2733" text-anchor="start" font-style="normal">discharge_date</text>
+<rect x="590" y="518" width="54" height="22" rx="11" fill="#fdf3e1" stroke="#a86a00" stroke-width="1"/><text x="617.0" y="534" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#a86a00" text-anchor="middle" font-style="normal">date</text>
+<text x="878" y="534" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="end" font-style="italic">Discharge Date</text>
+<text x="100" y="564" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="600" fill="#1d2733" text-anchor="start" font-style="normal">room_number</text>
+<rect x="590" y="548" width="45" height="22" rx="11" fill="#e6f4ee" stroke="#00684A" stroke-width="1"/><text x="612.5" y="564" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#00684A" text-anchor="middle" font-style="normal">int</text>
+<text x="878" y="564" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="end" font-style="italic">Room Number</text>
+<text x="100" y="594" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="600" fill="#1d2733" text-anchor="start" font-style="normal">doctor</text>
+<rect x="590" y="578" width="72" height="22" rx="11" fill="#e8f0f9" stroke="#2f6aa3" stroke-width="1"/><text x="626.0" y="594" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#2f6aa3" text-anchor="middle" font-style="normal">string</text>
+<text x="878" y="594" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="end" font-style="italic">Doctor</text>
+<text x="100" y="624" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="600" fill="#1d2733" text-anchor="start" font-style="normal">hospital</text>
+<rect x="590" y="608" width="72" height="22" rx="11" fill="#e8f0f9" stroke="#2f6aa3" stroke-width="1"/><text x="626.0" y="624" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#2f6aa3" text-anchor="middle" font-style="normal">string</text>
+<text x="878" y="624" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="end" font-style="italic">Hospital (virgule retirée)</text>
+<rect x="60" y="660" width="840" height="104" rx="10" fill="#ffffff" stroke="#00684A" stroke-width="2"/>
+<text x="78" y="688" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="700" fill="#00684A" text-anchor="start" font-style="normal">billing</text>
+<text x="156" y="688" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="start" font-style="italic">sous-document</text>
+<text x="100" y="718" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="600" fill="#1d2733" text-anchor="start" font-style="normal">amount</text>
+<rect x="590" y="702" width="72" height="22" rx="11" fill="#e6f4ee" stroke="#00684A" stroke-width="1"/><text x="626.0" y="718" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#00684A" text-anchor="middle" font-style="normal">double</text>
+<text x="878" y="718" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="end" font-style="italic">Billing Amount (2 déc.)</text>
+<text x="100" y="748" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="600" fill="#1d2733" text-anchor="start" font-style="normal">insurance_provider</text>
+<rect x="590" y="732" width="72" height="22" rx="11" fill="#e8f0f9" stroke="#2f6aa3" stroke-width="1"/><text x="626.0" y="748" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#2f6aa3" text-anchor="middle" font-style="normal">string</text>
+<text x="878" y="748" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="end" font-style="italic">Insurance Provider</text>
+<text x="70" y="796" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="600" fill="#1d2733" text-anchor="start" font-style="normal">medication</text>
+<rect x="590" y="780" width="72" height="22" rx="11" fill="#e8f0f9" stroke="#2f6aa3" stroke-width="1"/><text x="626.0" y="796" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#2f6aa3" text-anchor="middle" font-style="normal">string</text>
+<text x="878" y="796" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="end" font-style="italic">Medication</text>
+<text x="70" y="826" font-family="Menlo, Monaco, monospace" font-size="16" font-weight="600" fill="#1d2733" text-anchor="start" font-style="normal">test_results</text>
+<rect x="590" y="810" width="72" height="22" rx="11" fill="#e8f0f9" stroke="#2f6aa3" stroke-width="1"/><text x="626.0" y="826" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#2f6aa3" text-anchor="middle" font-style="normal">string</text>
+<text x="878" y="826" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="end" font-style="italic">Test Results</text>
+<rect x="960" y="105" width="400" height="250" rx="12" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<text x="978" y="137" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#00684A" text-anchor="start" font-style="normal">Index</text>
+<text x="978" y="165" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#1d2733" text-anchor="start" font-style="normal">_id_</text>
+<text x="1175" y="165" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="400" fill="#5b6776" text-anchor="start" font-style="normal">(automatique)</text>
+<text x="978" y="195" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#1d2733" text-anchor="start" font-style="normal">idx_patient_name</text>
+<text x="1175" y="195" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="400" fill="#5b6776" text-anchor="start" font-style="normal">patient.name</text>
+<text x="978" y="225" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#1d2733" text-anchor="start" font-style="normal">idx_medical_condition</text>
+<text x="1175" y="225" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="400" fill="#5b6776" text-anchor="start" font-style="normal">medical_condition</text>
+<text x="978" y="255" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#1d2733" text-anchor="start" font-style="normal">idx_admission_date</text>
+<text x="1175" y="255" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="400" fill="#5b6776" text-anchor="start" font-style="normal">admission.date</text>
+<text x="978" y="285" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#1d2733" text-anchor="start" font-style="normal">idx_hospital</text>
+<text x="1175" y="285" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="400" fill="#5b6776" text-anchor="start" font-style="normal">admission.hospital</text>
+<text x="978" y="335" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="start" font-style="normal">Accélèrent les recherches les plus fréquentes.</text>
+<rect x="960" y="380" width="400" height="250" rx="12" fill="#e8f0f9" stroke="#2f6aa3" stroke-width="2"/>
+<text x="978" y="412" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#2f6aa3" text-anchor="start" font-style="normal">Choix de modélisation</text>
+<text x="978" y="440" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">• Sous-documents : les champs liés sont</text>
+<text x="978" y="462" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">  regroupés (patient, admission, billing).</text>
+<text x="978" y="484" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">• Noms en anglais, snake_case.</text>
+<text x="978" y="506" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">• Types BSON vérifiés après migration ($type).</text>
+<text x="978" y="528" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">• 55 500 lignes – 534 doublons exacts</text>
+<text x="978" y="550" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">  = 54 966 documents.</text>
+<text x="978" y="572" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">• Pas de schéma imposé par MongoDB : c'est</text>
+<text x="978" y="594" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">  le script qui garantit la structure.</text>
+<rect x="960" y="655" width="400" height="210" rx="12" fill="#ffffff" stroke="#1d2733" stroke-width="2"/>
+<text x="978" y="687" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#1d2733" text-anchor="start" font-style="normal">Types BSON</text>
+<rect x="982" y="699" width="72" height="22" rx="11" fill="#e8f0f9" stroke="#2f6aa3" stroke-width="1"/><text x="1018.0" y="715" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#2f6aa3" text-anchor="middle" font-style="normal">string</text>
+<text x="1090" y="715" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">texte</text>
+<rect x="982" y="735" width="45" height="22" rx="11" fill="#e6f4ee" stroke="#00684A" stroke-width="1"/><text x="1004.5" y="751" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#00684A" text-anchor="middle" font-style="normal">int</text>
+<text x="1090" y="751" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">entier (32 bits)</text>
+<rect x="982" y="771" width="72" height="22" rx="11" fill="#e6f4ee" stroke="#00684A" stroke-width="1"/><text x="1018.0" y="787" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#00684A" text-anchor="middle" font-style="normal">double</text>
+<text x="1090" y="787" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">nombre décimal</text>
+<rect x="982" y="807" width="54" height="22" rx="11" fill="#fdf3e1" stroke="#a86a00" stroke-width="1"/><text x="1009.0" y="823" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" fill="#a86a00" text-anchor="middle" font-style="normal">date</text>
+<text x="1090" y="823" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">date (ISODate, UTC)</text>
+</svg>
