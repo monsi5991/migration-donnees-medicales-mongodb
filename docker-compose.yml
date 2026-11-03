@@ -1,0 +1,90 @@
+# Déploiement de la migration : 3 services, 2 volumes, 1 réseau nommé.
+# Lancement : docker compose up --build
+
+services:
+
+  # 1. Base de données MongoDB avec authentification activée
+  mongodb:
+    image: mongo:7.0
+    container_name: mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+      MONGO_DB: ${MONGO_DB}
+      MONGO_MIGRATION_USER: ${MONGO_MIGRATION_USER}
+      MONGO_MIGRATION_PASSWORD: ${MONGO_MIGRATION_PASSWORD}
+      MONGO_ANALYST_USER: ${MONGO_ANALYST_USER}
+      MONGO_ANALYST_PASSWORD: ${MONGO_ANALYST_PASSWORD}
+      MONGO_SOIGNANT_USER: ${MONGO_SOIGNANT_USER}
+      MONGO_SOIGNANT_PASSWORD: ${MONGO_SOIGNANT_PASSWORD}
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db                                  # volume des données MongoDB
+      - ./mongo-init:/docker-entrypoint-initdb.d:ro          # script de création des utilisateurs
+    networks:
+      - medical_network
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  # 2. Migration du CSV vers MongoDB (tests unitaires puis migration), puis s'arrête
+  migration:
+    build: .
+    container_name: migration
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    environment:
+      MONGO_HOST: mongodb
+      MONGO_PORT: 27017
+      MONGO_DB: ${MONGO_DB}
+      MONGO_COLLECTION: admissions
+      MONGO_MIGRATION_USER: ${MONGO_MIGRATION_USER}
+      MONGO_MIGRATION_PASSWORD: ${MONGO_MIGRATION_PASSWORD}
+      CSV_PATH: /data/csv/healthcare_dataset.csv
+      EXPORT_PATH: /data/export/admissions_export.json
+    volumes:
+      - csv_data:/data/csv:ro                                # volume du CSV (lecture seule)
+      - ./data/export:/data/export                           # export JSON récupérable sur la machine
+    networks:
+      - medical_network
+
+  # 3. Tests d'intégrité après migration, avec l'utilisateur en lecture seule
+  tests:
+    build: .
+    container_name: tests
+    depends_on:
+      migration:
+        condition: service_completed_successfully
+    environment:
+      MONGO_HOST: mongodb
+      MONGO_PORT: 27017
+      MONGO_DB: ${MONGO_DB}
+      MONGO_COLLECTION: admissions
+      MONGO_ANALYST_USER: ${MONGO_ANALYST_USER}
+      MONGO_ANALYST_PASSWORD: ${MONGO_ANALYST_PASSWORD}
+      CSV_PATH: /data/csv/healthcare_dataset.csv
+    command: ["pytest", "-v", "tests/test_database.py"]
+    volumes:
+      - csv_data:/data/csv:ro
+    networks:
+      - medical_network
+
+volumes:
+  mongo_data:
+    name: mongo_data
+  csv_data:
+    name: csv_data
+    driver: local
+    driver_opts:              # volume nommé qui pointe vers le dossier ./data du projet
+      type: none
+      o: bind
+      device: ./data
+
+networks:
+  medical_network:
+    name: medical_network
