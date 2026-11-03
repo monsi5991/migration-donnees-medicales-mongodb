@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="753" viewBox="0 0 1400 753">
+<defs>
+  <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#1d2733"/></marker>
+  <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#5b6776"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="40" y="48" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#1d2733">Utilisateurs et rôles</text>
+<text x="40" y="76" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#5b6776">Authentification activée · 4 utilisateurs, du plus puissant au plus restreint</text>
+<rect x="40" y="110" width="1350" height="56" rx="10" fill="#1d2733" stroke="#1d2733" stroke-width="2"/>
+<text x="58" y="145" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="start" font-style="normal">Utilisateur</text>
+<text x="288" y="145" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="start" font-style="normal">Rôle MongoDB</text>
+<text x="518" y="145" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="start" font-style="normal">Utilisé par</text>
+<text x="785.0" y="145" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle" font-style="normal">Lire</text>
+<text x="895.0" y="145" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle" font-style="normal">Ajouter</text>
+<text x="1005.0" y="145" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle" font-style="normal">Modifier</text>
+<text x="1115.0" y="145" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle" font-style="normal">Supprimer</text>
+<text x="1225.0" y="145" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle" font-style="normal">Créer index</text>
+<text x="1335.0" y="145" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle" font-style="normal">Gérer users</text>
+<rect x="40" y="166" width="1350" height="78" rx="0" fill="#f4f6f8" stroke="#c9d1db" stroke-width="1"/>
+<rect x="40" y="166" width="8" height="78" fill="#b3261e"/>
+<text x="64" y="200" font-family="Menlo, Monaco, monospace" font-size="17" font-weight="700" fill="#1d2733" text-anchor="start" font-style="normal">admin</text>
+<text x="64" y="224" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#5b6776" text-anchor="start" font-style="normal">base d'auth. : admin</text>
+<text x="288" y="200" font-family="Menlo, Monaco, monospace" font-size="17" font-weight="700" fill="#b3261e" text-anchor="start" font-style="normal">root</text>
+<text x="288" y="224" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#5b6776" text-anchor="start" font-style="normal">rôle intégré</text>
+<text x="518" y="211" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">administration</text>
+<circle cx="785.0" cy="205.0" r="17" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<path d="M777.0,205.0 L783.0,212.0 L794.0,198.0" fill="none" stroke="#00684A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="895.0" cy="205.0" r="17" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<path d="M887.0,205.0 L893.0,212.0 L904.0,198.0" fill="none" stroke="#00684A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1005.0" cy="205.0" r="17" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<path d="M997.0,205.0 L1003.0,212.0 L1014.0,198.0" fill="none" stroke="#00684A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1115.0" cy="205.0" r="17" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<path d="M1107.0,205.0 L1113.0,212.0 L1124.0,198.0" fill="none" stroke="#00684A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1225.0" cy="205.0" r="17" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<path d="M1217.0,205.0 L1223.0,212.0 L1234.0,198.0" fill="none" stroke="#00684A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1335.0" cy="205.0" r="17" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<path d="M1327.0,205.0 L1333.0,212.0 L1344.0,198.0" fill="none" stroke="#00684A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="40" y="244" width="1350" height="78" rx="0" fill="#ffffff" stroke="#c9d1db" stroke-width="1"/>
+<rect x="40" y="244" width="8" height="78" fill="#2f6aa3"/>
+<text x="64" y="278" font-family="Menlo, Monaco, monospace" font-size="17" font-weight="700" fill="#1d2733" text-anchor="start" font-style="normal">migration_user</text>
+<text x="64" y="302" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#5b6776" text-anchor="start" font-style="normal">base d'auth. : healthcare</text>
+<text x="288" y="278" font-family="Menlo, Monaco, monospace" font-size="17" font-weight="700" fill="#2f6aa3" text-anchor="start" font-style="normal">readWrite</text>
+<text x="288" y="302" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#5b6776" text-anchor="start" font-style="normal">rôle intégré</text>
+<text x="518" y="289" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">service migration</text>
+<circle cx="785.0" cy="283.0" r="17" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<path d="M777.0,283.0 L783.0,290.0 L794.0,276.0" fill="none" stroke="#00684A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="895.0" cy="283.0" r="17" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<path d="M887.0,283.0 L893.0,290.0 L904.0,276.0" fill="none" stroke="#00684A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1005.0" cy="283.0" r="17" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<path d="M997.0,283.0 L1003.0,290.0 L1014.0,276.0" fill="none" stroke="#00684A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1115.0" cy="283.0" r="17" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<path d="M1107.0,283.0 L1113.0,290.0 L1124.0,276.0" fill="none" stroke="#00684A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1225.0" cy="283.0" r="17" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<path d="M1217.0,283.0 L1223.0,290.0 L1234.0,276.0" fill="none" stroke="#00684A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1335.0" cy="283.0" r="17" fill="#fbe9e7" stroke="#b3261e" stroke-width="2"/>
+<path d="M1328.0,276.0 L1342.0,290.0 M1342.0,276.0 L1328.0,290.0" stroke="#b3261e" stroke-width="3.5" stroke-linecap="round"/>
+<rect x="40" y="322" width="1350" height="78" rx="0" fill="#f4f6f8" stroke="#c9d1db" stroke-width="1"/>
+<rect x="40" y="322" width="8" height="78" fill="#a86a00"/>
+<text x="64" y="356" font-family="Menlo, Monaco, monospace" font-size="17" font-weight="700" fill="#1d2733" text-anchor="start" font-style="normal">soignant_user</text>
+<text x="64" y="380" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#5b6776" text-anchor="start" font-style="normal">base d'auth. : healthcare</text>
+<text x="288" y="356" font-family="Menlo, Monaco, monospace" font-size="17" font-weight="700" fill="#a86a00" text-anchor="start" font-style="normal">editeurDossiers</text>
+<text x="288" y="380" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#5b6776" text-anchor="start" font-style="normal">rôle personnalisé</text>
+<text x="518" y="367" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">personnel soignant</text>
+<circle cx="785.0" cy="361.0" r="17" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<path d="M777.0,361.0 L783.0,368.0 L794.0,354.0" fill="none" stroke="#00684A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="895.0" cy="361.0" r="17" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<path d="M887.0,361.0 L893.0,368.0 L904.0,354.0" fill="none" stroke="#00684A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1005.0" cy="361.0" r="17" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<path d="M997.0,361.0 L1003.0,368.0 L1014.0,354.0" fill="none" stroke="#00684A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1115.0" cy="361.0" r="17" fill="#fbe9e7" stroke="#b3261e" stroke-width="2"/>
+<path d="M1108.0,354.0 L1122.0,368.0 M1122.0,354.0 L1108.0,368.0" stroke="#b3261e" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="1225.0" cy="361.0" r="17" fill="#fbe9e7" stroke="#b3261e" stroke-width="2"/>
+<path d="M1218.0,354.0 L1232.0,368.0 M1232.0,354.0 L1218.0,368.0" stroke="#b3261e" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="1335.0" cy="361.0" r="17" fill="#fbe9e7" stroke="#b3261e" stroke-width="2"/>
+<path d="M1328.0,354.0 L1342.0,368.0 M1342.0,354.0 L1328.0,368.0" stroke="#b3261e" stroke-width="3.5" stroke-linecap="round"/>
+<rect x="40" y="400" width="1350" height="78" rx="0" fill="#ffffff" stroke="#c9d1db" stroke-width="1"/>
+<rect x="40" y="400" width="8" height="78" fill="#00684A"/>
+<text x="64" y="434" font-family="Menlo, Monaco, monospace" font-size="17" font-weight="700" fill="#1d2733" text-anchor="start" font-style="normal">analyst_user</text>
+<text x="64" y="458" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#5b6776" text-anchor="start" font-style="normal">base d'auth. : healthcare</text>
+<text x="288" y="434" font-family="Menlo, Monaco, monospace" font-size="17" font-weight="700" fill="#00684A" text-anchor="start" font-style="normal">read</text>
+<text x="288" y="458" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#5b6776" text-anchor="start" font-style="normal">rôle intégré</text>
+<text x="518" y="445" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">service tests, analyses</text>
+<circle cx="785.0" cy="439.0" r="17" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<path d="M777.0,439.0 L783.0,446.0 L794.0,432.0" fill="none" stroke="#00684A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="895.0" cy="439.0" r="17" fill="#fbe9e7" stroke="#b3261e" stroke-width="2"/>
+<path d="M888.0,432.0 L902.0,446.0 M902.0,432.0 L888.0,446.0" stroke="#b3261e" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="1005.0" cy="439.0" r="17" fill="#fbe9e7" stroke="#b3261e" stroke-width="2"/>
+<path d="M998.0,432.0 L1012.0,446.0 M1012.0,432.0 L998.0,446.0" stroke="#b3261e" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="1115.0" cy="439.0" r="17" fill="#fbe9e7" stroke="#b3261e" stroke-width="2"/>
+<path d="M1108.0,432.0 L1122.0,446.0 M1122.0,432.0 L1108.0,446.0" stroke="#b3261e" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="1225.0" cy="439.0" r="17" fill="#fbe9e7" stroke="#b3261e" stroke-width="2"/>
+<path d="M1218.0,432.0 L1232.0,446.0 M1232.0,432.0 L1218.0,446.0" stroke="#b3261e" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="1335.0" cy="439.0" r="17" fill="#fbe9e7" stroke="#b3261e" stroke-width="2"/>
+<path d="M1328.0,432.0 L1342.0,446.0 M1342.0,432.0 L1328.0,446.0" stroke="#b3261e" stroke-width="3.5" stroke-linecap="round"/>
+<rect x="40" y="518" width="436.6666666666667" height="160" rx="12" fill="#f4f6f8" stroke="#1d2733" stroke-width="2"/>
+<text x="58" y="550" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#1d2733" text-anchor="start" font-style="normal">Moindre privilège</text>
+<text x="58" y="578" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">Chacun n'a que les droits</text>
+<text x="58" y="600" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">nécessaires à sa mission.</text>
+<text x="58" y="622" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">Un mot de passe volé limite</text>
+<text x="58" y="644" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">donc les dégâts possibles.</text>
+<rect x="496.6666666666667" y="518" width="436.6666666666667" height="160" rx="12" fill="#fdf3e1" stroke="#a86a00" stroke-width="2"/>
+<text x="514.6666666666667" y="550" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#a86a00" text-anchor="start" font-style="normal">Rôle personnalisé</text>
+<text x="514.6666666666667" y="578" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">editeurDossiers sur admissions :</text>
+<text x="514.6666666666667" y="600" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">actions find, insert, update.</text>
+<text x="514.6666666666667" y="622" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">L'action remove est absente :</text>
+<text x="514.6666666666667" y="644" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">le soignant ne supprime rien.</text>
+<rect x="953.3333333333334" y="518" width="436.6666666666667" height="160" rx="12" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<text x="971.3333333333334" y="550" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#00684A" text-anchor="start" font-style="normal">Mots de passe hachés</text>
+<text x="971.3333333333334" y="578" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">SCRAM-SHA-256 : sel aléatoire</text>
+<text x="971.3333333333334" y="600" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">+ 15 000 itérations.</text>
+<text x="971.3333333333334" y="622" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">Seuls salt, storedKey et serverKey</text>
+<text x="971.3333333333334" y="644" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">sont stockés, jamais le mot de passe.</text>
+<text x="40" y="718" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#5b6776" text-anchor="start" font-style="italic">Vérifié : connexion sans mot de passe → « requires authentication » · analyst_user insertOne → « not authorized » · soignant_user deleteOne → « not authorized »</text>
+</svg>

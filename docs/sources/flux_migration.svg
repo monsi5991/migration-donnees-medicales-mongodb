@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850">
+<defs>
+  <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#1d2733"/></marker>
+  <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#5b6776"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="40" y="48" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#1d2733">Flux de la migration</text>
+<text x="40" y="76" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" fill="#5b6776">Ce qui se passe quand on lance docker compose up --build (service migration, puis service tests)</text>
+<rect x="50" y="115" width="300" height="185" rx="12" fill="#f4f6f8" stroke="#5b6776" stroke-width="2"/>
+<text x="68" y="154" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#5b6776" text-anchor="start" font-style="normal">healthcare_dataset.csv</text>
+<text x="68" y="189" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">55 500 lignes, 15 colonnes</text>
+<text x="68" y="213" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">lu en texte (dtype=str)</text>
+<text x="68" y="237" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">via le volume csv_data</text>
+<rect x="390" y="115" width="300" height="185" rx="12" fill="#fdf3e1" stroke="#a86a00" stroke-width="2"/>
+<text x="408" y="154" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#a86a00" text-anchor="start" font-style="normal">Tests unitaires</text>
+<text x="408" y="189" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">pytest test_transform.py</text>
+<text x="408" y="213" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">6 tests sur un mini CSV</text>
+<text x="408" y="237" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">échec → migration annulée</text>
+<rect x="730" y="115" width="300" height="185" rx="12" fill="#e8f0f9" stroke="#2f6aa3" stroke-width="2"/>
+<circle cx="760" cy="147" r="17" fill="#2f6aa3"/>
+<text x="760" y="153" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle" font-style="normal">1</text>
+<text x="788" y="154" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#2f6aa3" text-anchor="start" font-style="normal">Contrôle AVANT</text>
+<text x="748" y="189" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">15 colonnes présentes ?</text>
+<text x="748" y="213" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">valeurs manquantes : 0</text>
+<text x="748" y="237" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">doublons : 534</text>
+<rect x="1070" y="115" width="300" height="185" rx="12" fill="#e8f0f9" stroke="#2f6aa3" stroke-width="2"/>
+<circle cx="1100" cy="147" r="17" fill="#2f6aa3"/>
+<text x="1100" y="153" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle" font-style="normal">2</text>
+<text x="1128" y="154" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#2f6aa3" text-anchor="start" font-style="normal">Nettoyage, typage</text>
+<text x="1088" y="189" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">espaces, noms « Prénom Nom »</text>
+<text x="1088" y="213" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">int / double (2 déc.) / date</text>
+<text x="1088" y="237" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">– 534 doublons → 54 966</text>
+<rect x="1070" y="395" width="300" height="185" rx="12" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<circle cx="1100" cy="427" r="17" fill="#00684A"/>
+<text x="1100" y="433" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle" font-style="normal">3</text>
+<text x="1128" y="434" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#00684A" text-anchor="start" font-style="normal">Insertion par lots</text>
+<text x="1088" y="469" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">collection vidée (rejouable)</text>
+<text x="1088" y="493" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">insert_many × 11 lots de 5 000</text>
+<text x="1088" y="517" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">user : migration_user</text>
+<rect x="730" y="395" width="300" height="185" rx="12" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<circle cx="760" cy="427" r="17" fill="#00684A"/>
+<text x="760" y="433" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle" font-style="normal">4</text>
+<text x="788" y="434" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#00684A" text-anchor="start" font-style="normal">Création des index</text>
+<text x="748" y="469" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">patient.name</text>
+<text x="748" y="493" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">medical_condition</text>
+<text x="748" y="517" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">admission.date, .hospital</text>
+<rect x="390" y="395" width="300" height="185" rx="12" fill="#e6f4ee" stroke="#00684A" stroke-width="2"/>
+<circle cx="420" cy="427" r="17" fill="#00684A"/>
+<text x="420" y="433" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle" font-style="normal">5</text>
+<text x="448" y="434" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#00684A" text-anchor="start" font-style="normal">Contrôle APRÈS</text>
+<text x="408" y="469" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">54 966 documents ?</text>
+<text x="408" y="493" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">champs obligatoires ($exists)</text>
+<text x="408" y="517" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">types BSON ($type)</text>
+<rect x="50" y="395" width="300" height="185" rx="12" fill="#fdf3e1" stroke="#a86a00" stroke-width="2"/>
+<circle cx="80" cy="427" r="17" fill="#a86a00"/>
+<text x="80" y="433" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle" font-style="normal">6</text>
+<text x="108" y="434" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#a86a00" text-anchor="start" font-style="normal">Export JSON</text>
+<text x="68" y="469" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">data/export/</text>
+<text x="68" y="493" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">admissions_export.json</text>
+<text x="68" y="517" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">sauvegarde lisible (23 Mo)</text>
+<polyline points="350,207.5 387,207.5" fill="none" stroke="#1d2733" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="390,487.5 353,487.5" fill="none" stroke="#1d2733" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="690,207.5 727,207.5" fill="none" stroke="#1d2733" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="730,487.5 693,487.5" fill="none" stroke="#1d2733" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="1030,207.5 1067,207.5" fill="none" stroke="#1d2733" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="1070,487.5 1033,487.5" fill="none" stroke="#1d2733" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="1220.0,300 1220.0,392" fill="none" stroke="#1d2733" stroke-width="2" marker-end="url(#arr)"/>
+<text x="1232.0" y="358" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="start" font-style="italic">connexion (10 essais)</text>
+<polyline points="200.0,580 200.0,677" fill="none" stroke="#1d2733" stroke-width="2" marker-end="url(#arr)"/>
+<text x="212.0" y="638" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5b6776" text-anchor="start" font-style="italic">code retour 0</text>
+<rect x="50" y="680" width="818.4" height="130" rx="12" fill="#e8f0f9" stroke="#2f6aa3" stroke-width="2"/>
+<text x="68" y="718" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#2f6aa3" text-anchor="start" font-style="normal">Service tests : pytest test_database.py (analyst_user, lecture seule)</text>
+<text x="68" y="752" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">nombre de documents · aucun doublon · types BSON · 4 index présents</text>
+<text x="68" y="778" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">· écriture refusée à l'analyste  →  5 passed</text>
+<rect x="898.4" y="680" width="471.6" height="130" rx="12" fill="#fbe9e7" stroke="#b3261e" stroke-width="2"/>
+<text x="916.4" y="718" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#b3261e" text-anchor="start" font-style="normal">En cas d'erreur à n'importe quelle étape</text>
+<text x="916.4" y="752" font-family="Menlo, Monaco, monospace" font-size="15" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">log [ERROR] + sys.exit(1)</text>
+<text x="916.4" y="778" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#1d2733" text-anchor="start" font-style="normal">→ le service tests ne démarre pas</text>
+</svg>
